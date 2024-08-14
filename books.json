@@ -1,0 +1,12 @@
+[
+    { "id": 1, "name": "To Kill a Mockingbird", "author": "Harper Lee" },
+    { "id": 2, "name": "1984", "author": "George Orwell" },
+    { "id": 3, "name": "The Great Gatsby", "author": "F. Scott Fitzgerald" },
+    { "id": 4, "name": "Pride and Prejudice", "author": "Jane Austen" },
+    { "id": 5, "name": "The Catcher in the Rye", "author": "J.D. Salinger" },
+    { "id": 6, "name": "The Hobbit", "author": "J.R.R. Tolkien" },
+    { "id": 7, "name": "Fahrenheit 451", "author": "Ray Bradbury" },
+    { "id": 8, "name": "Brave New World", "author": "Aldous Huxley" },
+    { "id": 9, "name": "Moby Dick", "author": "Herman Melville" },
+    { "id": 10, "name": "War and Peace", "author": "Leo Tolstoy" }
+]
