@@ -5,9 +5,9 @@ const path = require('node:path')
 const app = express()
 const port = 4000
 
-const agentsFilePath = path.join(__dirname, 'agents.json')
-const booksFilePath = path.join(__dirname, 'books.json')
-const userFilePath = path.join(__dirname, 'users.json')
+const agentsFilePath = path.join(__dirname, './data/agents.json')
+const booksFilePath = path.join(__dirname, './data/books.json')
+const userFilePath = path.join(__dirname, './data/users.json')
 
 app.get('/agents', async(req, res) => {
 try {
