@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "text": "Complete project report",
+    "category": "Work",
+    "completed": true
+  },
+  {
+    "id": 2,
+    "text": "Buy groceries",
+    "category": "Personal",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "text": "Schedule dentist appointment",
+    "category": "Health",
+    "completed": true
+  },
+  {
+    "id": 4,
+    "text": "Finish reading book",
+    "category": "Leisure",
+    "completed": false
+  },
+  {
+    "id": 5,
+    "text": "Plan weekend getaway",
+    "category": "Travel",
+    "completed": true
+  },
+  {
+    "id": 6,
+    "text": "Attend team meeting",
+    "category": "Work",
+    "completed": false
+  },
+  {
+    "id": 7,
+    "text": "Prepare dinner",
+    "category": "Personal",
+    "completed": true
+  },
+  {
+    "id": 8,
+    "text": "Renew car insurance",
+    "category": "Finance",
+    "completed": false
+  },
+  {
+    "id": 9,
+    "text": "Workout at the gym",
+    "category": "Health",
+    "completed": true
+  },
+  {
+    "id": 10,
+    "text": "Organize closet",
+    "category": "Home",
+    "completed": false
+  },
+  {
+    "id": 11,
+    "text": "hola",
+    "category": "hola",
+    "completed": false
+  },
+  {
+    "id": 12,
+    "text": "hola",
+    "category": "hola",
+    "completed": false
+  }
+]

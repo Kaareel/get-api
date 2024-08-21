@@ -35,4 +35,20 @@ const getAgentById = async (req, res) => {
     }
 }
 
-module.exports = {getAllAgents, getAgentById}
+const deleteAgentID = async (req, res) => {
+    const agentId = Number.parseInt(req.params.id);
+    try {
+        if (!Number(agentId)) {
+            return res.status(400).json({ error: 'Invalid agent ID' })
+        }
+        const data = await fs.readFile(agentsFilePath, 'utf8')
+        const agents = JSON.parse(data)
+        const updatedAgents = agents.results.filter(a => a.id!== agentId)
+        res.json(updatedAgents)
+}
+    catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Error reading agents file' });
+    }
+}
+module.exports = {getAllAgents, getAgentById, deleteAgentID}
