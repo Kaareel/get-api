@@ -5,33 +5,21 @@ const taskFilePath = path.join(__dirname, '../data/task.json');
 
 const getAllTasks = async (req, res) => {
     try {
+        
         const data = await fs.readFile(taskFilePath, 'utf8');
         const tasks = JSON.parse(data);
-        return res.json(tasks);
-    } catch (err) {
-        console.error(err);
-    }
-};
 
-const getTaskCompleted = async (req, res) => {
-    try {
-        const { completed } = req.query;
-        if (completed !== undefined && !['true', 'false'].includes(completed)) {
-            return res.status(400).json({ error: 'Query parameter "completed" must be "true" or "false"' });
+        const completed = req.query
+        if(!completed){
+            const isCompleted = completed === "true";
+            const filterTask = tasks.filter(task => task.completed === isCompleted);
+            return res.json(filterTask);
         }
 
-        const data = await fs.readFile(taskFilePath, 'utf8');
-        const tasks = JSON.parse(data);
+        return res.json(tasks);    
 
-        const isCompleted = completed === undefined ? undefined : completed === 'true';
-
-        const filterTask = tasks.filter(task => 
-            isCompleted === undefined ? true : task.completed === isCompleted
-        );
-        return res.json(filterTask);
     } catch (err) {
         console.error(err);
-        return res.status(500).json({ error: 'Server error' });
     }
 };
 
@@ -109,4 +97,4 @@ const deleteTaskId = async (req, res) => {
         res.status(500).json({ error: 'Error reading agents file' });
     }
 }
-module.exports = { getAllTasks, getTaskCompleted, postTask, putTask, deleteTaskId}
+module.exports = { getAllTasks, postTask, putTask, deleteTaskId}

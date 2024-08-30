@@ -5,14 +5,14 @@ const { getAllUsers , getUserById } = require('./controllers/user')
 const { getAllBooks, getBookById } = require('./controllers/book')
 const { getAllNote, getNoteById, postNote} = require('./controllers/note')
 const { getProductsCategory, getAllProducts, postProducts } = require('./controllers/products')
-const { getAllTasks, getTaskCompleted, postTask, putTask, deleteTaskId} = require('./controllers/task')
-const fs = require('node:fs/promises');
-const path = require('node:path');
+const { getAllTasks, postTask, putTask, deleteTaskId} = require('./controllers/task')
+const { getAllComments, postComment, putComment, deleteComment} = require('./controllers/comments')
+const { getAllSurveys, postSurveys, putSurvey, deleteSurveys } = require('./controllers/surveys')
 const app = express()
 const port = 4000
 app.use(express.json());
 
-const noteFilePath = path.join(__dirname, './data/notes.json');
+
 
 app.get('/agents', getAllAgents)
 app.get('/agents/:id', getAgentById)
@@ -31,12 +31,20 @@ app.get('/products', getAllProducts)
 app.get('/products/:category', getProductsCategory)
 app.post('/products', postProducts)
 
-app.get('/task/', getAllTasks)
-app.get('/tasks?status=completed', getTaskCompleted)
+app.get('/task', getAllTasks)
 app.post('/task', postTask)
-app.put('/task/:id/completed', putTask)
+app.put('/task/:id', putTask)
 app.delete('/task/:id', deleteTaskId)
 
+app.get('/comments/:postId?', getAllComments)
+app.post('/comments', postComment)
+app.put('/comments/:id', putComment)
+app.delete('/comments/:id', deleteComment)
+
+app.get('/surveys', getAllSurveys)
+app.post('/surveys', postSurveys)
+app.put('/surveys/:id', putSurvey)
+app.delete('/surveys/:id', deleteSurveys)
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)

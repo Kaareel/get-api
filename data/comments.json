@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "postId": 1,
+    "comment": "This article provided a fresh perspective on the topic. Well done!"
+  },
+  {
+    "id": 2,
+    "postId": 1,
+    "comment": "I completely disagree with the author's point of view."
+  },
+  {
+    "id": 3,
+    "postId": 2,
+    "comment": "The information presented here is incredibly valuable. Thank you!"
+  },
+  {
+    "id": 4,
+    "postId": 2,
+    "comment": "This is a well-written piece, but I feel some points are missing."
+  },
+  {
+    "id": 5,
+    "postId": 3,
+    "comment": "I learned something new today. Great work!"
+  },
+  {
+    "id": 6,
+    "postId": 3,
+    "comment": "Can someone clarify the last point mentioned in the article?"
+  },
+  {
+    "id": 7,
+    "postId": 4,
+    "comment": "This has sparked an interesting discussion in the comments!"
+  },
+  {
+    "id": 8,
+    "postId": 4,
+    "comment": "I'm not sure I fully understand the argument presented here."
+  },
+  {
+    "id": 9,
+    "postId": 5,
+    "comment": "The data provided in this article is questionable."
+  },
+  {
+    "id": 10,
+    "postId": 5,
+    "comment": "Fantastic read! I will definitely share this with my colleagues."
+  },
+  {
+    "id": 11,
+    "postId": 1,
+    "comment": "delete"
+  }
+]
